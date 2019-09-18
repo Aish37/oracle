@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       // window.onload = init;
+       window.addEventListener("load", init);
+        function init(){
+            document.getElementsByTagName("h1")[0].innerText = "Hello world";
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler)
+            document.getElementsByTagName("button")[1].addEventListener("click", removeClickHandler)
+        };
+
+        function clickHandler(){
+            alert("you clicked the button")
+        };
+        function removeClickHandler(){
+            document.getElementsByTagName("button")[0].removeEventListener("click", clickHandler);
+            document.getElementsByTagName("button")[1].removeEventListener("click", removeClickHandler);
+        };
+    </script>
+</head>
+<!--body onload="init()"-->
+<body>
+    <h1></h1>
+    <button>Check Listener</button>
+    <button>Remove Listener</button>
+</body>
+</html>
