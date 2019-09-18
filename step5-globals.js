@@ -1,0 +1,1 @@
+global.companyname = "Oracle";

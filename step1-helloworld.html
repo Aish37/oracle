@@ -10,15 +10,20 @@
        window.addEventListener("load", init);
         function init(){
             document.getElementsByTagName("h1")[0].innerText = "Hello world";
-            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler)
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler1)
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler2)
             document.getElementsByTagName("button")[1].addEventListener("click", removeClickHandler)
         };
 
-        function clickHandler(){
-            alert("you clicked the button")
+        function clickHandler1(){
+            alert("you clicked the button first")
+        };
+        function clickHandler2(){
+            alert("you clicked the button second")
         };
         function removeClickHandler(){
-            document.getElementsByTagName("button")[0].removeEventListener("click", clickHandler);
+            document.getElementsByTagName("button")[0].removeEventListener("click", clickHandler1);
+            document.getElementsByTagName("button")[0].removeEventListener("click", clickHandler2);
             document.getElementsByTagName("button")[1].removeEventListener("click", removeClickHandler);
         };
     </script>
@@ -28,5 +33,8 @@
     <h1></h1>
     <button>Check Listener</button>
     <button>Remove Listener</button>
+
+    
+
 </body>
 </html>
